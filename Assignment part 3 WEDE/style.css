@@ -1,0 +1,297 @@
+body {
+    background-color: #f8f5f2;
+    color: #333333;
+   font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #4a3f35;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #4a3f35;
+    text-decoration: none;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #b86b77;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5ddd6;
+}
+
+header h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header > p {
+    font-size: 18px;
+    color: #7a6a5d;
+    margin-top: 0;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+main a {
+    display: inline-block;
+    background-color: #b86b77;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+main a:hover {
+    background-color: #8f4f5a;
+}
+
+/* Images */
+main img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Service headings */
+section h3 {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    color: #b86b77;
+}
+
+/* Footer */
+footer {
+    background-color: #4a3f35;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+}
+
+/* ==================================
+   PART 3 - GALLERY LIGHTBOX
+================================== */
+
+/* Make gallery images interactive */
+.gallery-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox background */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Display lightbox when active */
+#lightbox.active {
+    display: flex;
+}
+
+/* Enlarged image */
+#lightbox-image {
+    max-width: 85%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Lightbox buttons */
+#lightbox button {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#lightbox button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Close button */
+#close-lightbox {
+    top: 20px;
+    right: 20px;
+}
+
+/* Previous button */
+#prev-image {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Next button */
+#next-image {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    #lightbox-image {
+        max-width: 75%;
+        max-height: 70vh;
+    }
+
+    #lightbox button {
+        padding: 8px 12px;
+        font-size: 20px;
+    }
+}
+
+/* PART 3 - FAQ ACCORDION */
+
+.faq-section {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f5f9ff;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #234e70;
+}
+
+.faq-item summary:hover {
+    background-color: #e1efff;
+}
+
+.faq-item[open] summary {
+    background-color: #d6eaff;
+}
+
+.faq-item p {
+    padding: 15px 18px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* PART 3 - GROOMING SERVICE SEPARATORS */
+
+.grooming-service {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.grooming-service:last-child {
+    border-bottom: none;
+}

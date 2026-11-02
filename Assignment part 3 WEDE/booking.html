@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Paws & Polish Dog Grooming</title>
+    
+<!-- PART 3 - SEO META DESCRIPTION -->
+<meta name="description" content="Book a dog grooming appointment with Paws & Polish. Explore our grooming services and complete our easy online booking form for your furry friend.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>🐾 Paws & Polish</h1>
+        <p>Professional Dog Grooming Services</p>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="aboutus.html">About Us</a> |
+            <a href="services.html">Services</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="booking.html">Book an Appointment</a> |
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section>
+
+            <h2>Book an Appointment</h2>
+
+            <p>
+                Give your furry friend the care they deserve by booking
+                a grooming appointment with Paws & Polish.
+            </p>
+
+            <p>
+                Please complete the form below and provide us with the
+                necessary information about you and your dog.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <!-- BOOKING FORM -->
+        <section>
+
+            <h2>Appointment Details</h2>
+
+            
+<form id="bookingForm" action="#" method="post">
+
+
+                <!-- CUSTOMER INFORMATION -->
+                <fieldset>
+
+                    <legend>Customer Information</legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <br>
+                        <input type="text"
+                               id="fullname"
+                               name="fullname"
+                               placeholder="Enter your full name"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <br>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <br>
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               placeholder="Enter your phone number"
+                               required>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- DOG INFORMATION -->
+                <fieldset>
+
+                    <legend>Dog Information</legend>
+
+                    <p>
+                        <label for="dogname">Dog's Name:</label>
+                        <br>
+                        <input type="text"
+                               id="dogname"
+                               name="dogname"
+                               placeholder="Enter your dog's name"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="breed">Dog Breed:</label>
+                        <br>
+                        <input type="text"
+                               id="breed"
+                               name="breed"
+                               placeholder="Enter your dog's breed"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="size">Dog Size:</label>
+                        <br>
+
+                        <select id="size" name="size" required>
+
+                            <option value="">-- Select Size --</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+
+                        </select>
+
+                    </p>
+
+                    <p>
+                        <label for="age">Dog's Age:</label>
+                        <br>
+                        <input type="number"
+                               id="age"
+                               name="age"
+                               min="0"
+                               max="30"
+                               placeholder="Enter dog's age">
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- SERVICE INFORMATION -->
+                <fieldset>
+
+                    <legend>Grooming Service</legend>
+
+                    <p>
+                        <label for="service">Select a Service:</label>
+                        <br>
+
+                        <select id="service" name="service" required>
+
+                            <option value="">-- Select a Service --</option>
+                            <option value="bath-brush">Bath & Brush</option>
+                            <option value="full-grooming">Full Grooming</option>
+                            <option value="nail-trimming">Nail Trimming</option>
+                            <option value="ear-cleaning">Ear Cleaning</option>
+                            <option value="de-shedding">De-shedding</option>
+
+                        </select>
+
+                    </p>
+
+                    <p>
+                        <label for="date">Preferred Date:</label>
+                        <br>
+
+                        <input type="date"
+                               id="date"
+                               name="date"
+                               required>
+
+                    </p>
+
+                    <p>
+                        <label for="time">Preferred Time:</label>
+                        <br>
+
+                        <input type="time"
+                               id="time"
+                               name="time"
+                               required>
+
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- ADDITIONAL INFORMATION -->
+                <fieldset>
+
+                    <legend>Additional Information</legend>
+
+                    <p>
+                        <label for="message">
+                            Is there anything we should know about your dog?
+                        </label>
+                        <br>
+
+                        <textarea id="message"
+                                  name="message"
+                                  rows="6"
+                                  cols="40"
+                                  placeholder="Enter any additional information here..."></textarea>
+
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- TERMS -->
+                <fieldset>
+
+                    <legend>Confirmation</legend>
+
+                    <p>
+                        <input type="checkbox"
+                               id="agreement"
+                               name="agreement"
+                               required>
+
+                        <label for="agreement">
+                            I confirm that the information provided is correct.
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- BUTTONS -->
+                <input type="submit" value="Submit Booking">
+
+                <input type="reset" value="Clear Form">
+
+                  <!-- PART 3 - BOOKING CONFIRMATION -->
+            <p id="bookingMessage" role="status" aria-live="polite"></p>
+          
+        </form>
+        </section>
+
+        <hr>
+
+        <!-- BOOKING INFORMATION -->
+        <section>
+
+
+            <h2>Booking Information</h2>
+
+            <p>
+                Please note that submitting this form is a booking
+                request. Our team will contact you to confirm your
+                appointment.
+            </p>
+
+            <p>
+                If you have any questions before booking, please visit
+                our <a href="contact.html">Contact Us</a> page.
+            </p>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Paws & Polish Dog Grooming. All Rights Reserved.
+        </p>
+
+        <p>
+            Email: pawsandpolish@example.com
+            <br>
+            Phone: 012 345 6789
+        </p>
+
+        <p>
+            Follow us on social media:
+            <br>
+            Facebook | Instagram
+        </p>
+
+    </footer>
+<script src="script.js" defer></script>
+</body>
+
+</html>
